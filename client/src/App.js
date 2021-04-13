@@ -9,11 +9,9 @@ import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
-// import { StoreProvider } from "./utils/GlobalState";
+import { StoreProvider } from "./utils/GlobalState";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
-import store from './utils/store';
-import { Provider } from 'react-redux'; 
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -32,7 +30,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Provider store={store}>
+          <StoreProvider>
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
@@ -43,7 +41,7 @@ function App() {
               <Route exact path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
             </Switch>
-          </Provider>
+          </StoreProvider>
         </div>
       </Router>
     </ApolloProvider>
