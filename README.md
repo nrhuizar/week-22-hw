@@ -15,7 +15,7 @@ This project is to become familiar with React Redux.  This is compared by Redux 
 After cloning, use npm install to install dependencies.  After install is complete, use npm start in your command line to launch the Redux Store.
 
 ## Screenshot
-
+![Screenshot](./client/public/images/Screenshot.png)
 
 ## Questions  
 
